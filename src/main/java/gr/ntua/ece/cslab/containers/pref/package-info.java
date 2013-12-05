@@ -1,5 +1,5 @@
 /**
- * 
+ * Package used to hold classes about the Preference ranks
  */
 /**
  * @author Giannis Giannakopoulos
