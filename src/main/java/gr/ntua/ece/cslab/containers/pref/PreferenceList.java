@@ -1,4 +1,4 @@
-package gr.ntua.ece.cslab.containers;
+package gr.ntua.ece.cslab.containers.pref;
 
 /**
  * Interface used to specify the communication interface for the preference list object.

@@ -1,4 +1,4 @@
-package gr.ntua.ece.cslab.containers;
+package gr.ntua.ece.cslab.containers.pref;
 
 /**
  * This class implements the {@link PreferenceList} interface, keeping all the data in memory.
@@ -17,12 +17,16 @@ public class PlainPreferenceList implements PreferenceList {
 	
 	@Override
 	public Preference next() {
+		if(!this.hasMore())
+			return null; 
 		this.index++;
 		return this.preferences[this.index];
 	}
 
 	@Override
 	public Preference getCurrentPreference() {
+		if(!this.hasMore() || this.index<0)
+			return null;
 		return this.preferences[this.index];
 	}
 
@@ -58,13 +62,13 @@ public class PlainPreferenceList implements PreferenceList {
 		for(int i=1;i<args.length;i++){
 			prefs[i-1]=new Preference(new Integer(args[i]), i);
 		}
-		PlainPreferenceList list  = new PlainPreferenceList(prefs);
+		PreferenceList list  = new PlainPreferenceList(prefs);
 		System.out.println(list);
 		while(list.hasMore()){
 			System.out.print(list.next()+"\t");
 		}
 		System.out.println();
-		list.seek(2);
+		System.out.println(list.seek(2));;
 		System.out.println(list.getCurrentPreference());
 		System.out.println(list.next());
 		System.out.println(list.getCurrentPreference());

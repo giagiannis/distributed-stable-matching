@@ -1,4 +1,4 @@
-package gr.ntua.ece.cslab.containers;
+package gr.ntua.ece.cslab.containers.pref;
 
 /**
  * Data container used to hold information about a specific 
