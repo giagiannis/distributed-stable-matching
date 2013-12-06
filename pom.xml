@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cslab.ece.ntua.gr</groupId>
 	<artifactId>distributed-stable-matching</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>Distributed Stable Mathcing</name>
 	<description>Framework used to build matching algorithms for Stable Matching Problems (Stable Marriage Problem, Stable Roomates Problem, etc.)</description>
 	<developers>
@@ -37,4 +37,11 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.hama</groupId>
+			<artifactId>hama-core</artifactId>
+			<version>0.6.3</version>
+		</dependency>
+	</dependencies>
 </project>
